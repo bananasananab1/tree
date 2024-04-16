@@ -13,8 +13,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "0.1",
+	name: "asdffsdff",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -43,6 +43,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	gain = gain * (player.points) + 1
 	return gain
 }
 
