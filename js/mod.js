@@ -14,7 +14,7 @@ let modInfo = {
 // Set your version in num and name
 let VERSION = {
 	num: "0.1",
-	name: "asdffsdff",
+	name: "fdas",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -43,7 +43,6 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
-	gain = gain + 1
 	return gain
 }
 
