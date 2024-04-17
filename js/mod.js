@@ -42,7 +42,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(2)
-	gain = Decimal.pentate(gain,player.ml.points)
+	gain = Decimal.mul(gain,player.ml.points)
 	gain = Decimal.add(gain,1)
 	return gain
 }
