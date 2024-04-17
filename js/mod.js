@@ -42,9 +42,12 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	gain = new Decimal(player.ml.points)
+    gain = Decimal.pentate(gain,player.rl.points)
+    gain = Decimal.pentate(gain,player.url.points)
 	gain = Decimal.mul(gain,player.ml.points)
-	gain = Decimal.add(gain,1)
-	if (hasUpgrade("ml", 1)) gain = Decimal.mul(gain,10)
+    gain = Decimal.mul(gain,player.rl.points)
+    gain = Decimal.mul(gain,player.url.points)
 	return gain
 }
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
