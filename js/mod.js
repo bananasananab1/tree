@@ -2,7 +2,7 @@ let modInfo = {
 	name: "The Banana Tree",
 	id: "bananas",
 	author: "me",
-	pointsName: "points",
+	pointsName: "cash",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -16,15 +16,14 @@ let VERSION = {
 	num: "0.1",
 	name: "fdas",
 }
-
 let changelog = `<h1>Changelog:</h1><br>
 	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
+		- sdfgh.<br>
+		- sdfgh.`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 
-// If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
+// If you add ne
 // (The ones here are examples, all official functions are already taken care of)
 var doNotCallTheseFunctionsEveryTick = ["blowUpEverything"]
 
@@ -43,11 +42,13 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(2)
+	gain = Decimal.pentate(gain,player.ml.points)
+	gain = Decimal.add(gain,1)
 	return gain
 }
-
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
 function addedPlayerData() { return {
+
 }}
 
 // Display extra things at the top of the page
@@ -56,7 +57,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.points.gte(new Decimal("1000"))
 }
 
 
